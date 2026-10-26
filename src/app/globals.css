@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+input[type="range"].lux-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 28px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].lux-range::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #07382f var(--fill, 50%), #e8e1d6 var(--fill, 50%));
+}
+input[type="range"].lux-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #fbf7ef;
+  border: 3px solid #07382f;
+  box-shadow: 0 2px 8px rgba(7, 56, 47, 0.35);
+}
+input[type="range"].lux-range::-moz-range-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: #e8e1d6;
+}
+input[type="range"].lux-range::-moz-range-progress {
+  height: 8px;
+  border-radius: 9999px;
+  background: #07382f;
+}
+input[type="range"].lux-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #fbf7ef;
+  border: 3px solid #07382f;
+  box-shadow: 0 2px 8px rgba(7, 56, 47, 0.35);
+}
+
+@theme {
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --color-neutral-50: #fbf7ef;
+  --color-neutral-100: #f4f2ec;
+  --color-neutral-200: #e8e1d6;
+  --color-neutral-300: #d6c9b2;
+  --color-neutral-400: #a79b86;
+  --color-neutral-500: #767676;
+  --color-neutral-600: #57504b;
+  --color-neutral-700: #3e3835;
+  --color-neutral-800: #2b2320;
+  --color-neutral-900: #07382f;
+  --color-neutral-950: #04231e;
+
+  --color-cream: #FBF7EF;
+  --color-paper: #FFFDF9;
+  --color-sand: #F4F2EC;
+  --color-clay: #BC4621;
+  --color-clay-dark: #96351A;
+  --color-clay-light: #FDEEDE;
+  --color-forest: #07382F;
+  --color-gold: #C99B55;
+  --color-gold-soft: #FAEAD0;
+  --color-ink: #2B2320;
+  --color-muted: #767676;
+  --color-line: #E8E1D6;
+}
+
+.shop-scope {
+  --font-sans: "Albert Sans", "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
+  --font-serif: "Fraunces", "Playfair Display", "Noto Serif Bengali", serif;
+  background: #FBF7EF;
+  color: #2B2320;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.shop-scope h1, .shop-scope h2 { font-family: var(--font-serif); }
+.shop-scope .eyebrow {
+  font-size: 16px; letter-spacing: 2.6px; text-transform: uppercase;
+  color: #C99B55; font-weight: 800;
+}
+.shop-scope .gold-divider { width: 40px; height: 2px; background: #C99B55; margin: 14px 0; }
+.shop-scope .gold-divider.center { margin: 14px auto; }
+
+body {
+  background: #fbf7ef;
+  color: #2b2320;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+:where(button:not(:disabled), [role="button"]:not([aria-disabled="true"])) {
+  cursor: pointer;
+}
